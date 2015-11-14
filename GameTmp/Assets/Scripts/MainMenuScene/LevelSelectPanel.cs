@@ -8,7 +8,7 @@ public class LevelSelectPanel : MonoBehaviour {
 	}
 
 	public void OnLevelSelect(int _level) {
-		GlobalDefines.levelLoaded = (byte)_level;
+		GlobalDefines.levelLoaded = _level;
 		Application.LoadLevel("GameScene");
 	}
 	public void OnBack() {
