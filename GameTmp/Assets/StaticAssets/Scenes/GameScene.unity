@@ -583,7 +583,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1377724045}
-        m_MethodName: OnNext
+        m_MethodName: GameResumed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
