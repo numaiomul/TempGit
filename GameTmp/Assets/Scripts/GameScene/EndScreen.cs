@@ -7,15 +7,23 @@ public class EndScreen : MonoBehaviour {
 		GlobalDefines.gameEndScreen = this;
 	}
 
+	public RawImage winMovie;
+	public AudioSource winSource;
 	public Button mainMenuBtn, resetBtn, nextBtn, resumeBtn;
 
 	public void GameWon() {
 		Time.timeScale = 0f;
+		winMovie.gameObject.SetActive(true);
+		(winMovie.mainTexture as MovieTexture).Play();
+		winSource.gameObject.SetActive(true);
 		if (GlobalDefines.maxLevel == GlobalDefines.levelLoaded) {
 			Show(true,true,false,false);
 		}
 		else {
 			Show(true,true,true,false);
+		}
+		if (GlobalDefines.musicOn) {
+			GlobalDefines.LevelMusicToggle(false);
 		}
 	}
 	public void GameLost() {
@@ -43,15 +51,14 @@ public class EndScreen : MonoBehaviour {
 	}
 
 	public void OnMainMenu () {
+		GlobalDefines.LevelMusicToggle(GlobalDefines.musicOn);
 		Time.timeScale = 1f;
 		Application.LoadLevel("MainMenu");
 	}
 	public void OnReset() {
-		Time.timeScale = 1f;
 		Application.LoadLevel("GameScene");
 	}
 	public void OnNext() {
-		Time.timeScale = 1f;
 		GlobalDefines.levelLoaded++;
 		Application.LoadLevel("GameScene");
 	}

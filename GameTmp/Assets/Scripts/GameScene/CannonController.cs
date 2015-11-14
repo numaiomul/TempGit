@@ -20,6 +20,8 @@ public class CannonController : MonoBehaviour {
 	[SerializeField] private Transform powerBar;
 
 	[SerializeField] private float timeToRespawnAnotherProjectile;
+	public AudioSource shootAudio;
+	public AudioSource loadAudio;
 
 	private Vector3 projScale;
 
@@ -37,6 +39,7 @@ public class CannonController : MonoBehaviour {
 			if (DOTween.IsTweening (transform)) {
 				transform.DOKill ();
 				MovePowerBarToMax ();
+				loadAudio.Play();
 				powerBar.gameObject.SetActive (true);
 			} else
 			if (DOTween.IsTweening (powerBar.transform)) {
@@ -59,6 +62,8 @@ public class CannonController : MonoBehaviour {
 		projectile.AddForce (transform.right * force, ForceMode2D.Impulse);
 		powerBar.DOKill ();
 		Invoke ("RefreshProjectile", timeToRespawnAnotherProjectile);
+		shootAudio.Play();
+		loadAudio.Stop();
 	}
 
 	private void MovePowerBarToMin () {
