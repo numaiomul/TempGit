@@ -57,6 +57,7 @@ public class CannonController : MonoBehaviour {
 	private void LaunchTheProjectile (float force) {
 		GameObject projectileGO = (GameObject)Instantiate(projectile.gameObject,projectileStartPosition.position,Quaternion.identity) ;
 		projectileGO.SetActive (true);
+		projectileGO.transform.name = "Projectile";
 		projectileGO.transform.localScale = projScale;
 		projectile = projectileGO.GetComponent<Rigidbody2D> ();
 		projectile.AddForce (transform.right * force, ForceMode2D.Impulse);
