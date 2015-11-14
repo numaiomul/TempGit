@@ -27,7 +27,6 @@ public class EndScreen : MonoBehaviour {
 		Show(true,true,false,true);
 	}
 	public void GameResumed() {
-		Time.timeScale = 1f;
 		Hide();
 	}
 
@@ -39,16 +38,20 @@ public class EndScreen : MonoBehaviour {
 		resumeBtn.gameObject.SetActive(_resume);
 	}
 	private void Hide() {
+		Time.timeScale = 1f;
 		gameObject.SetActive(false);
 	}
 
 	public void OnMainMenu () {
+		Time.timeScale = 1f;
 		Application.LoadLevel("MainMenu");
 	}
 	public void OnReset() {
+		Time.timeScale = 1f;
 		Application.LoadLevel("GameScene");
 	}
 	public void OnNext() {
+		Time.timeScale = 1f;
 		GlobalDefines.levelLoaded++;
 		Application.LoadLevel("GameScene");
 	}

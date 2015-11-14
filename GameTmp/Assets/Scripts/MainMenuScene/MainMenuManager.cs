@@ -13,13 +13,12 @@ public class MainMenuManager : MonoBehaviour {
 		GlobalDefines.levelSelectScreen.gameObject.SetActive(true);
         
     }
-    public void OnOptionsButton() {
-        this.gameObject.SetActive(false);
-        GlobalDefines.optionsMenuScreen.gameObject.SetActive(true);
 
-    }
-    public void OnCreditsButton() {
-        this.gameObject.SetActive(false);
-        GlobalDefines.creditsMenuScreen.gameObject.SetActive(true);
-    }
+	public void OnToggleSound(bool _value) {
+		GlobalDefines.soundOn = _value;
+	}
+	public void OnToggleMusic(bool _value) {
+		GlobalDefines.musicOn = _value;
+	}
+
 }
