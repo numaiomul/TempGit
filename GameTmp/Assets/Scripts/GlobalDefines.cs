@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 public static class GlobalDefines {
-	public const byte maxLevel = 1;
+	public const byte maxLevel = 2;
 	public static byte levelLoaded = 1;
 
     //MainMenu
