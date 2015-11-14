@@ -15,10 +15,16 @@ public class CannonController : MonoBehaviour {
 	[SerializeField] private float maxForce;
 
 	[SerializeField] private Rigidbody2D projectile;
+	[SerializeField] private Transform projectileStartPosition;
 	[SerializeField] private Transform powerBar;
+
+	[SerializeField] private float timeToRespawnAnotherProjectile;
+
+	private Vector3 powerBarStartPosition;
 
 	private void Awake () {
 		RotateToZMax ();
+		powerBarStartPosition = powerBar.transform.localPosition;
 	}
 
 	private void Update () {
@@ -27,18 +33,26 @@ public class CannonController : MonoBehaviour {
 				transform.DOKill ();
 				MovePowerBarToMax ();
 				powerBar.gameObject.SetActive (true);
-			} else {
+			} else
+			if (DOTween.IsTweening (powerBar.transform)) {
 				float force = (powerBar.transform.localPosition.x + Mathf.Abs (minPowerBar))/(maxPowerBar - minPowerBar);
 				LaunchTheProjectile (force * maxForce);
+				powerBar.gameObject.SetActive (false);
 			}
 		}
 	}
+	private void RefreshProjectile () {
+		powerBar.transform.localPosition = powerBarStartPosition;
+		RotateToZMax ();
+	}
 
 	private void LaunchTheProjectile (float force) {
+		projectile = Instantiate (projectile.gameObject as GameObject).GetComponent<Rigidbody2D> ();
+		projectile.transform.position = projectileStartPosition.position;
 		projectile.gameObject.SetActive (true);
-		projectile.AddForce (projectile.transform.right * force, ForceMode2D.Impulse);
-		enabled = false;
+		projectile.AddForce (transform.right * force, ForceMode2D.Impulse);
 		powerBar.DOKill ();
+		Invoke ("RefreshProjectile", timeToRespawnAnotherProjectile);
 	}
 
 	private void MovePowerBarToMin () {
@@ -56,6 +70,6 @@ public class CannonController : MonoBehaviour {
 
 	private void RotateToZMax () {
 		transform.DORotate (new Vector3 (transform.localEulerAngles.x, transform.localEulerAngles.y, maxEulerAngleZ), 
-		                    timeRotate).OnComplete (RotateToZMin);;
+		                    timeRotate).OnComplete (RotateToZMin);
 	}
  }
