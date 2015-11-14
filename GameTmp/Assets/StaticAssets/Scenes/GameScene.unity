@@ -370,7 +370,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 235253444}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1377724045}
+        m_MethodName: OnReset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &235253444
@@ -644,7 +655,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 732569000}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1377724045}
+        m_MethodName: OnMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &732569000
@@ -692,7 +714,7 @@ GameObject:
   - 114: {fileID: 862073600}
   - 114: {fileID: 862073599}
   m_Layer: 5
-  m_Name: Continue
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -754,7 +776,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 862073600}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1377724045}
+        m_MethodName: OnNext
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &862073600
@@ -871,9 +904,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb96c2f1dd4cf04486963b2ece3d319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuBtn: {fileID: 0}
-  resetBtn: {fileID: 0}
-  nextBtn: {fileID: 0}
+  mainMenuBtn: {fileID: 732568999}
+  resetBtn: {fileID: 235253443}
+  nextBtn: {fileID: 862073599}
 --- !u!1 &1424231693
 GameObject:
   m_ObjectHideFlags: 0

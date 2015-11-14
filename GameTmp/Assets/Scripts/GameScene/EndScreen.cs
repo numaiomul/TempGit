@@ -3,15 +3,29 @@ using UnityEngine.UI;
 
 public class EndScreen : MonoBehaviour {
 
+	private EndScreen() {
+		GlobalDefines.gameEndScreen = this;
+	}
+
 	public Button mainMenuBtn,resetBtn,nextBtn;
 
-	public void Show (bool _main, bool _reset, bool _next) {
+	public void GameWon() {
+		Show(true,true,true);
+	}
+	public void GameLost() {
+		Show(true,true,false);
+	}
+	public void Pause() {
+		Show(true,true,false);
+	}
+
+	private void Show (bool _main, bool _reset, bool _next) {
 		gameObject.SetActive(true);
 		mainMenuBtn.gameObject.SetActive(_main);
 		resetBtn.gameObject.SetActive(_reset);
 		nextBtn.gameObject.SetActive(_next);
 	}
-	public void Hide() {
+	private void Hide() {
 		gameObject.SetActive(false);
 	}
 
