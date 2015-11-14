@@ -16,10 +16,7 @@ public class Level6Box : MonoBehaviour {
 	}
 
 	public void SetToghether () {
-		transform.DOMove (toPos.position, duration).SetEase (Ease.OutExpo).OnComplete ( delegate {
-			GetComponent<Rigidbody2D> ().isKinematic = false;
-			}
-		) ;
+		transform.DOMove (toPos.position, duration).SetEase (Ease.OutExpo);
 		GetComponent <Collider2D> ().isTrigger = false;
 		enabled = false;
 	}

@@ -745,7 +745,7 @@ GameObject:
   - 4: {fileID: 411326}
   m_Layer: 0
   m_Name: Level6
-  m_TagString: Untagged
+  m_TagString: ProjectileLevel6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1544,7 +1544,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 8, y: 11.6999998}
 --- !u!61 &6101290
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1557,7 +1557,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 8, y: 11.6999998}
 --- !u!61 &6104778
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1609,7 +1609,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 8, y: 11.6999998}
 --- !u!61 &6115028
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1700,7 +1700,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 8, y: 11.6999998}
 --- !u!61 &6134906
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1765,7 +1765,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 8, y: 11.6999998}
 --- !u!61 &6154510
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -1908,7 +1908,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 8, y: 11.6999998}
 --- !u!114 &11407292
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2012,6 +2012,8 @@ MonoBehaviour:
   projectileStartPosition: {fileID: 456944}
   powerBar: {fileID: 412420}
   timeToRespawnAnotherProjectile: 0
+  shootAudio: {fileID: 0}
+  loadAudio: {fileID: 0}
 --- !u!114 &11472870
 MonoBehaviour:
   m_ObjectHideFlags: 1
