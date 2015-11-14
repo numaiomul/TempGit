@@ -35,18 +35,16 @@ public class CannonController : MonoBehaviour {
 	}
 
 	private void Update () {
-		if (Input.GetMouseButtonDown (0) && Time.timeScale != 0f) {
-			if (DOTween.IsTweening (transform)) {
-				transform.DOKill ();
-				MovePowerBarToMax ();
-				loadAudio.Play();
-				powerBar.gameObject.SetActive (true);
-			} else
-			if (DOTween.IsTweening (powerBar.transform)) {
-				float force = (powerBar.transform.localPosition.x + Mathf.Abs (minPowerBar))/(maxPowerBar - minPowerBar);
-				LaunchTheProjectile (force * maxForce);
-				powerBar.gameObject.SetActive (false);
-			}
+		if (Input.GetMouseButtonDown (0) && Time.timeScale != 0f && DOTween.IsTweening (transform)) {
+			transform.DOKill ();
+			MovePowerBarToMax ();
+			loadAudio.Play();
+			powerBar.gameObject.SetActive (true);
+		}
+		if (Input.GetMouseButtonUp(0) && Time.timeScale != 0f && DOTween.IsTweening (powerBar.transform)) {
+			float force = (powerBar.transform.localPosition.x + Mathf.Abs (minPowerBar))/(maxPowerBar - minPowerBar);
+			LaunchTheProjectile (force * maxForce);
+			powerBar.gameObject.SetActive (false);
 		}
 	}
 	private void RefreshProjectile () {
