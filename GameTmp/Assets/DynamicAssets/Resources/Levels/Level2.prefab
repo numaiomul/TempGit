@@ -60,7 +60,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 471506}
   m_Layer: 0
-  m_Name: Level1
+  m_Name: Level2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -517,7 +517,9 @@ MonoBehaviour:
   timePowerBar: 1
   maxForce: 20
   projectile: {fileID: 5053536, guid: 1af89c191d1860c44b8698b88cba623e, type: 2}
+  projectileStartPosition: {fileID: 0}
   powerBar: {fileID: 441334}
+  timeToRespawnAnotherProjectile: 0
 --- !u!212 &21203470
 SpriteRenderer:
   m_ObjectHideFlags: 1
