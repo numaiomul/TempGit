@@ -32,6 +32,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!1 &147832
 GameObject:
   m_ObjectHideFlags: 1
@@ -47,6 +48,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+=======
+>>>>>>> origin/master
 --- !u!1 &176964
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,8 +135,12 @@ MonoBehaviour:
   maxPowerBar: 2.5
   timePowerBar: 1
   maxForce: 20
+<<<<<<< HEAD
   projectile: {fileID: 5021984, guid: f9bf8f27e4656af42bd1c772e5f64bc7, type: 2}
   projectileStartPosition: {fileID: 463296}
+=======
+  projectile: {fileID: 5053536, guid: 1af89c191d1860c44b8698b88cba623e, type: 2}
+>>>>>>> origin/master
   powerBar: {fileID: 464446}
 --- !u!212 &21241220
 SpriteRenderer:
