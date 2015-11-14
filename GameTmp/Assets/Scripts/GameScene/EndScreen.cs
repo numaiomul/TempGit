@@ -15,9 +15,6 @@ public class EndScreen : MonoBehaviour {
 	public void GameLost() {
 		Show(true,true,false);
 	}
-	public void Pause() {
-		Show(true,true,false);
-	}
 
 	private void Show (bool _main, bool _reset, bool _next) {
 		gameObject.SetActive(true);
