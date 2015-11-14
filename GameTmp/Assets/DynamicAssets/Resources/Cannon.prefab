@@ -379,7 +379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minEulerAngleZ: 30
   maxEulerAngleZ: 80
-  timeRotate: .5
+  timeRotate: 1
   minPowerBar: .100000001
   maxPowerBar: 1
   timePowerBar: 1
@@ -632,6 +632,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxPowerBar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: timeRotate
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
