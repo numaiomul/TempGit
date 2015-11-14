@@ -33,7 +33,7 @@ public class CannonController : MonoBehaviour {
 	}
 
 	private void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0) && Time.timeScale != 0f) {
 			if (DOTween.IsTweening (transform)) {
 				transform.DOKill ();
 				MovePowerBarToMax ();
