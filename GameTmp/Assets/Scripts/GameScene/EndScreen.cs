@@ -10,7 +10,12 @@ public class EndScreen : MonoBehaviour {
 	public Button mainMenuBtn,resetBtn,nextBtn;
 
 	public void GameWon() {
-		Show(true,true,true);
+		if (GlobalDefines.maxLevel == GlobalDefines.levelLoaded) {
+			Show(true,true,false);
+		}
+		else {
+			Show(true,true,true);
+		}
 	}
 	public void GameLost() {
 		Show(true,true,false);
