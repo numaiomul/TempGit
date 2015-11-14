@@ -3,16 +3,15 @@ using System.Collections;
 
 public class MainMenuManager : MonoBehaviour {
 
-    private MainMenuManager()
-    {
+    private MainMenuManager() {
         GlobalDefines.mainMenuScreen = this;
 
     }
 
     public void OnPlayButton() {
-        GlobalDefines.levelLoaded = 1;
-        Application.LoadLevel("GameScene");
-
+		this.gameObject.SetActive(false);
+		GlobalDefines.levelSelectScreen.gameObject.SetActive(true);
+        
     }
     public void OnOptionsButton() {
         this.gameObject.SetActive(false);

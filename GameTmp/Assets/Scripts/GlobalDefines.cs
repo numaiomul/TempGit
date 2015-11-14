@@ -5,6 +5,7 @@ public static class GlobalDefines {
 
     //MainMenu
     public static MainMenuManager mainMenuScreen;
+	public static LevelSelectPanel levelSelectScreen;
     public static OptionsMenuManager optionsMenuScreen;
     public static CreditsMenuManager  creditsMenuScreen;
 
