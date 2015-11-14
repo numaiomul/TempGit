@@ -20,11 +20,15 @@ public class CannonController : MonoBehaviour {
 
 	[SerializeField] private float timeToRespawnAnotherProjectile;
 
+	private Vector3 projScale;
+
 	private Vector3 powerBarStartPosition;
 
 	private void Awake () {
+		projScale = new Vector3 ((transform.localScale.x/10),(transform.localScale.y/10),1);
 		RotateToZMax ();
 		powerBarStartPosition = powerBar.transform.localPosition;
+
 	}
 
 	private void Update () {
@@ -47,9 +51,10 @@ public class CannonController : MonoBehaviour {
 	}
 
 	private void LaunchTheProjectile (float force) {
-		projectile = Instantiate (projectile.gameObject as GameObject).GetComponent<Rigidbody2D> ();
-		projectile.transform.position = projectileStartPosition.position;
-		projectile.gameObject.SetActive (true);
+		GameObject projectileGO = (GameObject)Instantiate(projectile.gameObject,projectileStartPosition.position,Quaternion.identity) ;
+		projectileGO.SetActive (true);
+		projectileGO.transform.localScale = projScale;
+		projectile = projectileGO.GetComponent<Rigidbody2D> ();
 		projectile.AddForce (transform.right * force, ForceMode2D.Impulse);
 		powerBar.DOKill ();
 		Invoke ("RefreshProjectile", timeToRespawnAnotherProjectile);
