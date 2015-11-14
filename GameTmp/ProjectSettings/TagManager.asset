@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Projectile
   - Bounce
-  - ProjectileLevel6
+  - Ballon
   layers:
   - Default
   - TransparentFX

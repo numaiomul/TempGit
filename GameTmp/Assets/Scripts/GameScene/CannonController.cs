@@ -63,6 +63,9 @@ public class CannonController : MonoBehaviour {
 		Invoke ("RefreshProjectile", timeToRespawnAnotherProjectile);
 		shootAudio.Play();
 		loadAudio.Stop();
+		if (GlobalDefines.levelLoaded == 3) {
+			(projectile.GetComponent<SpriteRenderer>().material.mainTexture as MovieTexture).Play();
+		}
 	}
 
 	private void MovePowerBarToMin () {
