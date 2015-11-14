@@ -1,0 +1,4 @@
+*.csproj
+GameTmp/Library/*
+GameTmp/Temp/*
+*.sln
