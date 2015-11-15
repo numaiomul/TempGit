@@ -352,6 +352,7 @@ GameObject:
   - 4: {fileID: 471506}
   - 82: {fileID: 8204106}
   - 114: {fileID: 11485702}
+  - 114: {fileID: 11485708}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -2521,6 +2522,22 @@ MonoBehaviour:
   sound:
   - {fileID: 8279864}
   - {fileID: 8201522}
+--- !u!114 &11485708
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee12933718c68b46b5f181e7dcb8129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleForCamera: {fileID: 19819286, guid: 1dbd11d2ca3f29640b6bd21d7b6393d2, type: 2}
+  startPosition: {x: -8, y: -5, z: -2}
+  canon: {fileID: 157564, guid: fe36b7e9f49ea2b40bd2308de5f5581e, type: 2}
+  particleForPresent: {fileID: 19874670, guid: 07646d420e43aea44892c3a6320a52ed, type: 2}
+  particleForePresentStartPosition: {x: 6, y: -4, z: -2}
 --- !u!198 &19872968
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4676,6 +4693,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_TagString
       value: Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: particleForePresentStartPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: particleForePresentStartPosition.y
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
