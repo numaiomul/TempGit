@@ -352,6 +352,7 @@ GameObject:
   - 4: {fileID: 471506}
   - 82: {fileID: 8204106}
   - 114: {fileID: 11485702}
+  - 114: {fileID: 11448754}
   m_Layer: 0
   m_Name: Level2
   m_TagString: Untagged
@@ -2473,6 +2474,19 @@ MonoBehaviour:
   m_FillAmount: .930000007
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11448754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee12933718c68b46b5f181e7dcb8129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleForPresent: {fileID: 19874670, guid: 07646d420e43aea44892c3a6320a52ed, type: 2}
+  particleForePresentStartPosition: {x: 6, y: -4, z: -2}
 --- !u!114 &11454852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4681,6 +4695,14 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9bce9f4c199f7ef4aa487f58b573b468, type: 3}
+    - target: {fileID: 0}
+      propertyPath: particleForePresentStartPosition.x
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: particleForePresentStartPosition.y
+      value: -4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132630}

@@ -14,7 +14,8 @@ public class MainMenuManager : MonoBehaviour {
         
     }
 	public void OnEarlyAcces() {
-
+		GlobalDefines.levelLoaded = 4;
+		Application.LoadLevel("GameScene");
 	}
 	public void OnQuitButton() {
 		Application.Quit();
