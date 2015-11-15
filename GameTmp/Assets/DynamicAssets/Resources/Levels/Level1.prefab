@@ -2317,8 +2317,8 @@ MonoBehaviour:
   particleForCamera: {fileID: 19819286, guid: 1dbd11d2ca3f29640b6bd21d7b6393d2, type: 2}
   startPosition: {x: -8, y: -5, z: -2}
   canon: {fileID: 157564}
-  particleForPresent: {fileID: 19812458, guid: b5ea624fac4bcb44f96ad51d3745727e, type: 2}
-  particleForePresentStartPosition: {x: -.5, y: -5, z: -2}
+  particleForPresent: {fileID: 19874670, guid: 07646d420e43aea44892c3a6320a52ed, type: 2}
+  particleForePresentStartPosition: {x: -.800000012, y: -4, z: -2}
 --- !u!212 &21219916
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -3383,16 +3383,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.x
-      value: -.5
+      value: -.800000012
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.y
-      value: -5
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.z
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: particleForPresent
+      value: 
+      objectReference: {fileID: 19874670, guid: 07646d420e43aea44892c3a6320a52ed,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132630}
