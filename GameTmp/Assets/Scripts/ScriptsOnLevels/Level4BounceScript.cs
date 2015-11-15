@@ -25,7 +25,7 @@ public class Level4BounceScript : MonoBehaviour {
 			physicMaterial.bounciness = 1.4f;
 			break;
 		case "Projectile":
-			CloseGate ();
+			//CloseGate ();
 			physicMaterial.bounciness = 0.0f;
 			break;
 		default:
