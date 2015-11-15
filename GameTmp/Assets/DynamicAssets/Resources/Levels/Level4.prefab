@@ -559,7 +559,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 460738}
-  - 82: {fileID: 8224546}
   - 114: {fileID: 11407130}
   - 114: {fileID: 11499242}
   m_Layer: 0
@@ -2021,76 +2020,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .400000006, y: 1.64999998}
---- !u!82 &8224546
-AudioSource:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 162916}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9bce9f4c199f7ef4aa487f58b573b468, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
 --- !u!82 &8228370
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2242,11 +2171,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049b3febe3320714289db4e3f6b93bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music:
-  - {fileID: 8204106, guid: 06e78745ee238444db6f8f90a78783a7, type: 2}
+  music: []
   sound:
   - {fileID: 8279864, guid: 06e78745ee238444db6f8f90a78783a7, type: 2}
   - {fileID: 8201522, guid: 06e78745ee238444db6f8f90a78783a7, type: 2}
+  counter: 0
 --- !u!114 &11413350
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4602,12 +4531,24 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: music.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.x
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.y
       value: 4.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Volume
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: music.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

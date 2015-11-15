@@ -2236,7 +2236,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9bce9f4c199f7ef4aa487f58b573b468, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2535,6 +2535,7 @@ MonoBehaviour:
   sound:
   - {fileID: 8279864}
   - {fileID: 8201522}
+  counter: 0
 --- !u!198 &19872968
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4702,6 +4703,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.y
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Volume
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

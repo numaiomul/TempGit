@@ -40,6 +40,10 @@ public class EndScreen : MonoBehaviour {
 		loseSource.gameObject.SetActive(true);
 
 		Show(true,true,false,false);
+		
+		if (GlobalDefines.musicOn) {
+			GlobalDefines.LevelMusicToggle(false);
+		}
 	}
 	public void GamePaused() {
 		Time.timeScale = 0f;
