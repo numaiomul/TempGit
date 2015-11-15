@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 public class PowerBarUpdate : MonoBehaviour {
-
+ 
 	public Transform powerBar;
 
 	public Image bar1,bar2;
