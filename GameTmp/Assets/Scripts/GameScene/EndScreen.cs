@@ -9,12 +9,16 @@ public class EndScreen : MonoBehaviour {
 
 	public RawImage winMovie;
 	public AudioSource winSource;
+	public Image loseImg;
+	public AudioSource loseSource;
 	public Button mainMenuBtn, resetBtn, nextBtn, resumeBtn;
+	public Text timer;
 
 	public void GameWon() {
 		Time.timeScale = 0f;
 		winMovie.gameObject.SetActive(true);
 		if (winMovie.mainTexture != null) {
+			(winMovie.mainTexture as MovieTexture).Stop();
 			(winMovie.mainTexture as MovieTexture).Play();
 			winSource.gameObject.SetActive(true);
 		}
@@ -30,6 +34,9 @@ public class EndScreen : MonoBehaviour {
 	}
 	public void GameLost() {
 		Time.timeScale = 0f;
+		loseImg.gameObject.SetActive(true);
+		loseSource.gameObject.SetActive(true);
+
 		Show(true,true,false,false);
 	}
 	public void GamePaused() {
