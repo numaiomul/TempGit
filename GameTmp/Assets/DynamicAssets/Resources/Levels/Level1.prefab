@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particleForPresent: {fileID: 19874670, guid: 07646d420e43aea44892c3a6320a52ed, type: 2}
-  particleForePresentStartPosition: {x: -.5, y: -5, z: -2}
+  particleForePresentStartPosition: {x: -.699999988, y: -4.5, z: -2}
 --- !u!198 &19826616
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4661,11 +4661,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.x
-      value: -.5
+      value: -.699999988
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.y
-      value: -5
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: particleForePresentStartPosition.z
