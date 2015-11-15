@@ -17,7 +17,6 @@ public class RotateSnow : MonoBehaviour {
 			rotateTo = Vector3.back;
 			break;
 		}
-		//rotateTo *= Random.Range (0,5);
 	}
 
 	private void Update () {
