@@ -1977,7 +1977,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 27040e0c6cf03a040823057d458298bd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .00999999978
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2345,9 +2345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee12933718c68b46b5f181e7dcb8129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particleForCamera: {fileID: 19819286, guid: 1dbd11d2ca3f29640b6bd21d7b6393d2, type: 2}
-  startPosition: {x: -8, y: -5, z: -2}
-  canon: {fileID: 157564}
   particleForPresent: {fileID: 19874670, guid: 07646d420e43aea44892c3a6320a52ed, type: 2}
   particleForePresentStartPosition: {x: -.5, y: -5, z: -2}
 --- !u!198 &19826616
@@ -4518,6 +4515,10 @@ Prefab:
       value: 
       objectReference: {fileID: 19874670, guid: 07646d420e43aea44892c3a6320a52ed,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Volume
+      value: .200000003
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 132630}
