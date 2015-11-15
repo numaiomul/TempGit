@@ -18,9 +18,11 @@ public class EndScreen : MonoBehaviour {
 		Time.timeScale = 0f;
 		winMovie.gameObject.SetActive(true);
 		if (winMovie.mainTexture != null) {
-			(winMovie.mainTexture as MovieTexture).Stop();
-			(winMovie.mainTexture as MovieTexture).Play();
-			winSource.gameObject.SetActive(true);
+			if ((winMovie.mainTexture as MovieTexture) != null) {
+				(winMovie.mainTexture as MovieTexture).Stop();
+				(winMovie.mainTexture as MovieTexture).Play();
+				winSource.gameObject.SetActive(true);
+			}
 		}
 		if (GlobalDefines.maxLevel == GlobalDefines.levelLoaded) {
 			Show(true,true,false,false);

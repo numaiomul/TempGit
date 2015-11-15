@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 public static class GlobalDefines {
-	public const int maxLevel = 6;
+	public const int maxLevel = 4;
 	public static int levelLoaded = 1;
 
 	private static bool _soundOn = true;
