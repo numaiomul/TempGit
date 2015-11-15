@@ -13,12 +13,11 @@ public class MainMenuManager : MonoBehaviour {
 		GlobalDefines.levelSelectScreen.gameObject.SetActive(true);
         
     }
+	public void OnEarlyAcces() {
 
-	public void OnToggleSound(bool _value) {
-		GlobalDefines.soundOn = _value;
 	}
-	public void OnToggleMusic(bool _value) {
-		GlobalDefines.musicOn = _value;
+	public void OnQuitButton() {
+		Application.Quit();
 	}
 
 }

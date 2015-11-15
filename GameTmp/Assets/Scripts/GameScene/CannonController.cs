@@ -22,7 +22,7 @@ public class CannonController : MonoBehaviour {
 	[SerializeField] private float timeToRespawnAnotherProjectile;
 	public AudioSource shootAudio;
 	public AudioSource loadAudio;
-
+	public ParticleSystem gunShot;
 	private Vector3 projScale;
 
 	private Vector3 powerBarStartPosition;
@@ -63,9 +63,7 @@ public class CannonController : MonoBehaviour {
 		Invoke ("RefreshProjectile", timeToRespawnAnotherProjectile);
 		shootAudio.Play();
 		loadAudio.Stop();
-		if (GlobalDefines.levelLoaded == 3) {
-			(projectile.GetComponent<SpriteRenderer>().material.mainTexture as MovieTexture).Play();
-		}
+		gunShot.Play();
 	}
 
 	private void MovePowerBarToMin () {
